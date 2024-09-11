@@ -11,6 +11,9 @@ public class SerialNumber : MonoBehaviour
     private TMP_InputField m_textMeshProUGUI;
 
     [SerializeField]
+    private GameObject m_windowToClose;
+
+    [SerializeField]
     private DiseaseManager diseaseManager;
 
     public void SetCurrentSerialNumber()
@@ -26,7 +29,7 @@ public class SerialNumber : MonoBehaviour
         {
             Sequence sequence = DOTween.Sequence();
             sequence.Append(m_textMeshProUGUI.image.DOColor(Color.green, 0.5f).SetEase(Ease.Linear));
-            sequence.Append(m_textMeshProUGUI.GetComponent<RectTransform>().DOScale(0, 0.5f));
+            sequence.Append(m_windowToClose.transform.DOScale(0, 0.5f));
         }
     }
 }
