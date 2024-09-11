@@ -9,8 +9,10 @@ public class Troubabook : Window
 {
     enum Personnage
     {
+        HostingPage,
         Yvain,
         Gauvain,
+        GodeFroy,
     }
     private TMP_Dropdown _dropdown;
     [SerializeField] private Personnage _personnage;

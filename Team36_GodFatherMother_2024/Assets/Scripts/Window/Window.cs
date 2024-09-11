@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Window : MonoBehaviour
 {
-    
-    
     public void ShowWindow() //print window
     {
         transform.SetAsLastSibling(); //change the order of hierarchy

@@ -44,9 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3173b30106f71445a614c1b0c7008a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _windows:
-  - {fileID: 675640980201377685}
-  - {fileID: 2912543515141899774}
 --- !u!1 &875058007975875345
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,7 +147,7 @@ RectTransform:
   m_GameObject: {fileID: 921748917378466466}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.5618186, y: 2.4583244, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8255718720826822294}
@@ -160,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 177}
+  m_AnchoredPosition: {x: 0, y: 408}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5884852532311334519
@@ -251,6 +248,8 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
+    - m_Text: Hosting Page
+      m_Image: {fileID: 0}
     - m_Text: Yvain
       m_Image: {fileID: 0}
     - m_Text: Gauvain
@@ -1417,7 +1416,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcc417699aef06a4c80ce5326cc27672, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _window: {fileID: 704212368660579537}
+  _windows:
+  - {fileID: 675640980201377685}
+  - {fileID: 2912543515141899774}
 --- !u!1 &5033669836760660150
 GameObject:
   m_ObjectHideFlags: 0
@@ -2062,7 +2063,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Yvain
+  m_text: Hosting Page
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2799,6 +2800,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3155498892238375663}
     m_Modifications:
+    - target: {fileID: 87328198980326670, guid: 64198f7d6ea57ee44836d2b93677e005, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9a8f1698a0199304897a052fd8af68ef, type: 3}
     - target: {fileID: 1978221508898906622, guid: 64198f7d6ea57ee44836d2b93677e005, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -3043,7 +3048,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 704212368660579537}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1234325112848871278, guid: acaf3104ceb4f594fbba47f519418ec6, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8109301675283652093, guid: acaf3104ceb4f594fbba47f519418ec6, type: 3}
       insertIndex: -1
