@@ -22,6 +22,9 @@ public class DiseaseManager : MonoBehaviour
     [SerializeField]
     private List<DiseaseSO> diseases = new List<DiseaseSO>();
 
+    private DiseaseType m_currentDiseaseType;
+
+
     public void Start()
     {
         foreach (DiseaseSO disease in diseases)
@@ -29,7 +32,23 @@ public class DiseaseManager : MonoBehaviour
             int random = UnityEngine.Random.Range(0, 2);
             disease.allowToPass = random > 0 ? true : false;
 
-            Debug.Log($"{disease.name} + { random } {disease.allowToPass}");
+            //Debug.Log($"{disease.name} + { random } {disease.allowToPass}");
         }
+    }
+
+    public bool CheckSerialNumber(int _serialNumber)
+    {
+        bool foundSerialNumber = false;
+
+        foreach (DiseaseSO disease in diseases)
+        {
+            if (_serialNumber == disease.serialNumber)
+            {
+                foundSerialNumber = true;
+                m_currentDiseaseType = disease.diseaseType;
+            }
+        }
+
+        return foundSerialNumber;
     }
 }
