@@ -21,16 +21,16 @@ public class VitrailXP : MonoBehaviour
         _windows[1]?.ShowWindow();
     }
 
-    public void OpenMatriculeButton()
+    /*public void OpenMatriculeButton()
     {
         Debug.Log("I open Matricule");
         _windows[2]?.ShowWindow();
-    }
+    }*/
 
     public void OpenVerdictButton()
     {
         Debug.Log("I open Verdict");
-        _windows[3]?.ShowWindow();
+        _windows[2]?.ShowWindow();
     }
 
     public void CloseAllWindowsButton()
