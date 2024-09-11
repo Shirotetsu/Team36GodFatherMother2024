@@ -1,18 +1,50 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using TMPro.EditorUtilities;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Troubabook : Window
 {
-    // Start is called before the first frame update
-    void Start()
+    enum Personnage
     {
-        
+        Yvain,
+        Gauvain,
+    }
+    private TMP_Dropdown _dropdown;
+    [SerializeField] private Personnage _personnage;
+    private Image _image;
+    [SerializeField] private List<Sprite> _sprites;
+
+    private void Start()
+    {
+        _dropdown = GetComponentInChildren<TMP_Dropdown>();
+        _image = GetComponentInChildren<Image>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        _personnage = (Personnage)_dropdown?.value;
+        _image.sprite = Search();
+
+    }
+    public Sprite Search() //Search and print the Personnage page
+    {
+        Sprite sprite;
+        switch (_personnage)
+        {
+            case Personnage.Gauvain:
+                sprite = _sprites[0];
+                break;
+            case Personnage.Yvain:
+                sprite = _sprites[1];
+                break;
+            default:
+                Debug.Log("test");
+                sprite = null;
+                break;
+        }
+        return sprite;
     }
 }

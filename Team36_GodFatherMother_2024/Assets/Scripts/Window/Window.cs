@@ -5,19 +5,18 @@ using UnityEngine;
 public class Window : MonoBehaviour
 {
     [SerializeField] private List<Window> _windows;
-    [SerializeField] private Troubabook _troubabook;
-    [SerializeField] private Wiki _wiki;
     public List<Window> Windows { get => _windows; set => _windows = value; }
 
 
-    private void Start()
+
+    public void ShowWindow() //print window
     {
-        _windows.Add(_troubabook);
-        _windows.Add(_wiki);
+        transform.SetAsLastSibling(); //change the order of hierarchy
+        gameObject.SetActive(true);
     }
 
-    public void ShowWindow(Window window)
+    public void HideWindow(Window window) //hide window
     {
-        Debug.Log("hello");
+        window.gameObject.SetActive(false);
     }
 }
