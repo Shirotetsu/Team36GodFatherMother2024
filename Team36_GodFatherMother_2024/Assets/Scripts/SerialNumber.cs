@@ -1,4 +1,4 @@
-using System;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,8 +20,13 @@ public class SerialNumber : MonoBehaviour
         if (!diseaseManager.CheckSerialNumber(currentSerialNumber))
         {
             // Display Error Message
-            m_textMeshProUGUI.image.color = Color.red;
-            Debug.Log("Hello");
+            m_textMeshProUGUI.image.DOColor(Color.red, 0.1f).SetEase(Ease.Linear).SetLoops(4, LoopType.Yoyo);
+        }
+        else
+        {
+            Sequence sequence = DOTween.Sequence();
+            sequence.Append(m_textMeshProUGUI.image.DOColor(Color.green, 0.5f).SetEase(Ease.Linear));
+            sequence.Append(m_textMeshProUGUI.GetComponent<RectTransform>().DOScale(0, 0.5f));
         }
     }
 }
