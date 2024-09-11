@@ -160,8 +160,8 @@ MonoBehaviour:
     diseaseType: 1
     allowToPass: 0
     serialNumber: 758356
-  - name: Sida
-    diseaseType: 0
+  - name: Colera
+    diseaseType: 2
     allowToPass: 0
     serialNumber: 251862
 --- !u!4 &353546846

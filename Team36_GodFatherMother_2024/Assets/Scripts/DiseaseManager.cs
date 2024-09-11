@@ -5,15 +5,6 @@ using UnityEngine;
 
 public class DiseaseManager : MonoBehaviour
 {
-    [Serializable]
-    public class Disease
-    {
-        public string name;
-        public DiseaseType diseaseType;
-        public bool allowToPass;
-        public int serialNumber;
-    }
-
     public enum DiseaseType
     {
         Sida,
@@ -21,11 +12,19 @@ public class DiseaseManager : MonoBehaviour
         Colera
     }
 
-    public List<Disease> diseases = new List<Disease>();
+    public enum Symptoms
+    {
+        Parano,
+        Liar,
+        Scared
+    }
+
+    [SerializeField]
+    private List<DiseaseSO> diseases = new List<DiseaseSO>();
 
     public void Start()
     {
-        foreach (Disease disease in diseases)
+        foreach (DiseaseSO disease in diseases)
         {
             int random = UnityEngine.Random.Range(0, 2);
             disease.allowToPass = random > 0 ? true : false;
