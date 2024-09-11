@@ -8,34 +8,34 @@ using UnityEngine.UI;
 
 public class VitrailXP : MonoBehaviour
 {
-    [SerializeField] private Window _window;
+    [SerializeField] private List<Window> _windows;
     public void OpenTroubadourButton()
     {
         Debug.Log("I open toubadour");
-        _window.Windows[0]?.ShowWindow();
+        _windows[0]?.ShowWindow();
     }
 
     public void OpenWikiButton()
     {
         Debug.Log("I open Wiki");
-        _window.Windows[1]?.ShowWindow();
+        _windows[1]?.ShowWindow();
     }
 
     public void OpenMatriculeButton()
     {
         Debug.Log("I open Matricule");
-        _window.Windows[2]?.ShowWindow();
+        _windows[2]?.ShowWindow();
     }
 
     public void OpenVerdictButton()
     {
         Debug.Log("I open Verdict");
-        _window.Windows[3]?.ShowWindow();
+        _windows[3]?.ShowWindow();
     }
 
     public void CloseAllWindowsButton()
     {
-        foreach (var item in _window.Windows)
+        foreach (var item in _windows)
         {
             item.gameObject.SetActive(false);
         }

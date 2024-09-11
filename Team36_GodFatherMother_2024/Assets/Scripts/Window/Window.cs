@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class Window : MonoBehaviour
 {
-    [SerializeField] private List<Window> _windows;
-    public List<Window> Windows { get => _windows; set => _windows = value; }
-
-
-
+    
+    
     public void ShowWindow() //print window
     {
         transform.SetAsLastSibling(); //change the order of hierarchy
