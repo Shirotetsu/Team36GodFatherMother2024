@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3632176726981555050}
   - component: {fileID: 1790485032890078012}
   - component: {fileID: 6602339307250972387}
-  - component: {fileID: 6297930624389865387}
   m_Layer: 5
   m_Name: InputField (Script)
   m_TagString: Untagged
@@ -140,7 +139,7 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6297930624389865387}
+      - m_Target: {fileID: 5834609447803701181}
         m_TargetAssemblyTypeName: SerialNumber, Assembly-CSharp
         m_MethodName: SetCurrentSerialNumber
         m_Mode: 1
@@ -188,22 +187,6 @@ MonoBehaviour:
   m_isRichTextEditingAllowed: 0
   m_LineLimit: 0
   m_InputValidator: {fileID: 0}
---- !u!114 &6297930624389865387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2947589749496586808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7d3fab67a79af846ac9575a1250a2b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentSerialNumber: 0
-  m_inputField: {fileID: 6602339307250972387}
-  m_windowToClose: {fileID: 4468254886785452315}
-  diseaseManager: {fileID: 0}
 --- !u!1 &3202460815657302951
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,6 +248,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6240149836528089669}
+  - component: {fileID: 5834609447803701181}
   m_Layer: 5
   m_Name: MatriculeInputField
   m_TagString: Untagged
@@ -294,6 +278,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5834609447803701181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4468254886785452315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7d3fab67a79af846ac9575a1250a2b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentSerialNumber: 0
+  m_inputField: {fileID: 6602339307250972387}
+  m_windowToClose: {fileID: 4468254886785452315}
+  diseaseManager: {fileID: 0}
 --- !u!1 &4767573439381607239
 GameObject:
   m_ObjectHideFlags: 0

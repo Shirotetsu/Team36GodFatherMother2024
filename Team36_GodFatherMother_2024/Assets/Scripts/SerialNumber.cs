@@ -45,12 +45,6 @@ public class SerialNumber : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-            OpenWindow();
-    }
-
     public void OpenWindow()
     {
         m_windowToClose.transform.DOMove(basePos, 0.5f).From(0);
