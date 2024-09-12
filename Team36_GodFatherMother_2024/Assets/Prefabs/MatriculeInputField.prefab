@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6602339307250972387}
   - component: {fileID: 6297930624389865387}
   m_Layer: 5
-  m_Name: InputField (TMP)
+  m_Name: InputField (Script)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentSerialNumber: 0
-  m_textMeshProUGUI: {fileID: 6602339307250972387}
+  m_inputField: {fileID: 6602339307250972387}
   m_windowToClose: {fileID: 4468254886785452315}
   diseaseManager: {fileID: 0}
 --- !u!1 &3202460815657302951

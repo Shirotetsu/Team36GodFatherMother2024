@@ -254,6 +254,10 @@ PrefabInstance:
       propertyPath: _windows.Array.data[2]
       value: 
       objectReference: {fileID: 3383003621256262179}
+    - target: {fileID: 2693699590645434300, guid: 20a426269826e8142bbbf247bd8e6307, type: 3}
+      propertyPath: _windows.Array.data[2]
+      value: 
+      objectReference: {fileID: 3383003621256262179}
     - target: {fileID: 3995685914292121562, guid: 20a426269826e8142bbbf247bd8e6307, type: 3}
       propertyPath: m_IsActive
       value: 0
