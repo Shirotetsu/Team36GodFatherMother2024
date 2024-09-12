@@ -1,25 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using static DiseaseManager;
 
 public class Disease : MonoBehaviour
 {
     private bool _isEnable;
     private int _nbSymptomsFound = 0;
-    [SerializeField] List<Symptoms> _symptoms;
-    public bool SearchIfContains(Symptoms symptoms)
+    [SerializeField] public List<Symptoms> _symptoms;
+    public TMP_Text _text;
+    private void Start()
     {
-        foreach (var symptom in _symptoms)
-        {
-            if (symptoms.name == symptom.name)
-            {
-                _nbSymptomsFound++;
-                _isEnable = true;
-                return true;
-            }
-
-
-        }
-        return false;
+        _text = GetComponentInChildren<TMP_Text>();
+        _text.gameObject.SetActive(false);
     }
+
+
 }
