@@ -14,5 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Rhume
   diseaseType: 1
+  potionType: 1
   allowToPass: 0
   serialNumber: 758356
+  symptoms: 
+  Description: 
