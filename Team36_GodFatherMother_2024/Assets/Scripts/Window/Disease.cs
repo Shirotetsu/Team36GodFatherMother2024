@@ -14,7 +14,6 @@ public class Disease : MonoBehaviour
     private void Start()
     {
         _text = GetComponentInChildren<TMP_Text>();
-        _text.gameObject.SetActive(false);
     }
 
 
