@@ -220,9 +220,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diseases:
-  - {fileID: 11400000, guid: d3bcaaae258355946a74d0666117f98d, type: 2}
-  - {fileID: 11400000, guid: d5d0d8b6423233443952a2cda4125d66, type: 2}
-  - {fileID: 11400000, guid: c79e27a1997d12b40ac078306a5d11f8, type: 2}
+  - {fileID: 11400000, guid: b79b3eeb7fee1b24b8f2599bedf97848, type: 2}
+  - {fileID: 11400000, guid: a694f900c7285334fbe35523afb43255, type: 2}
+  - {fileID: 11400000, guid: a76d233f5c44c4248aa4ac535f4a75ae, type: 2}
   currentSerialNumber: 0
 --- !u!4 &353546846
 Transform:
@@ -315,6 +315,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5228294016908902078, guid: 20a426269826e8142bbbf247bd8e6307, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6108077460223639693, guid: 20a426269826e8142bbbf247bd8e6307, type: 3}
       propertyPath: diseaseManager
       value: 
@@ -322,6 +326,10 @@ PrefabInstance:
     - target: {fileID: 6693450899028533926, guid: 20a426269826e8142bbbf247bd8e6307, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -780
+      objectReference: {fileID: 0}
+    - target: {fileID: 7197070698971077496, guid: 20a426269826e8142bbbf247bd8e6307, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8843232748778927552, guid: 20a426269826e8142bbbf247bd8e6307, type: 3}
       propertyPath: m_AnchoredPosition.x
