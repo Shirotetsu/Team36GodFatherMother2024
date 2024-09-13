@@ -23,6 +23,13 @@ public class Verdict : Window
 
     private bool categoryOpen;
 
+    [SerializeField]
+    private GameObject m_textGreen;
+    [SerializeField]
+    private GameObject m_textRed;
+    [SerializeField]
+    private GameObject m_textBlue;
+
     void Start()
     {
         this.gameObject.SetActive(false);
@@ -55,6 +62,25 @@ public class Verdict : Window
             .OnComplete(() =>
             {
                 UpdateHolders();
+
+                if (categorySelected.PotionType == PotionType.Green)
+                {
+                    m_textGreen.SetActive(true);
+                    m_textRed.SetActive(false);
+                    m_textBlue.SetActive(false);
+                }
+                if (categorySelected.PotionType == PotionType.Red)
+                {
+                    m_textGreen.SetActive(false);
+                    m_textRed.SetActive(true);
+                    m_textBlue.SetActive(false);
+                }
+                if (categorySelected.PotionType == PotionType.Blue)
+                {
+                    m_textGreen.SetActive(false);
+                    m_textRed.SetActive(false);
+                    m_textBlue.SetActive(true);
+                }
             }));
 
         sequence.AppendInterval(m_delayBeforeReOpening);
