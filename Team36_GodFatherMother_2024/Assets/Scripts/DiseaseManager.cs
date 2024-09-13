@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class DiseaseManager : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class DiseaseManager : MonoBehaviour
 
     private DiseaseType m_currentDiseaseType;
 
+    public int currentSerialNumber = 0;
 
     public void Start()
     {
@@ -33,6 +35,20 @@ public class DiseaseManager : MonoBehaviour
             disease.allowToPass = random > 0 ? true : false;
 
             //Debug.Log($"{disease.name} + { random } {disease.allowToPass}");
+        }
+    }
+
+    public void VerifySerialNumber(PotionType potionType)
+    {
+        DiseaseSO diseaseLinkToThisSN = diseases.Where(x => x.serialNumber == currentSerialNumber).FirstOrDefault();
+
+        if (diseaseLinkToThisSN.potionType == potionType)
+        {
+            Debug.Log("Healed !!");
+        }
+        else 
+        {
+            Debug.Log("Died !!");
         }
     }
 

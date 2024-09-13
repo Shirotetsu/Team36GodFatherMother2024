@@ -1,11 +1,10 @@
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class Verdict : Window
 {
-    private CategoryType categorySelected;
-
     [SerializeField]
     private DiseaseManager diseaseManager;
 
@@ -14,6 +13,10 @@ public class Verdict : Window
 
     [SerializeField]
     private GameObject recipeHolder;
+
+    // 
+
+    private CategoryType categorySelected;
 
     [SerializeField]
     private float m_delayBeforeReOpening = 0.5f;
@@ -75,6 +78,11 @@ public class Verdict : Window
 
     public override void ShowWindow()
     {
+        if (diseaseManager.currentSerialNumber <= 10)
+        {
+            return;
+        }
+
         base.ShowWindow();
         gameObject.transform.DOScaleX(1, 0.5f).From(0).SetEase(Ease.OutBack);
 
@@ -97,7 +105,7 @@ public class Verdict : Window
 
     public void Administer()
     {
-        
+        diseaseManager.VerifySerialNumber(categorySelected.PotionType);
     }
 
     private void UpdateHolders()

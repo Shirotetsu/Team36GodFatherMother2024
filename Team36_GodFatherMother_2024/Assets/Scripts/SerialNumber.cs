@@ -37,11 +37,14 @@ public class SerialNumber : MonoBehaviour
         }
         else
         {
+            // Succed
             Sequence sequence = DOTween.Sequence();
             sequence.Append(m_inputField.image.DOColor(Color.green, 0.5f).SetEase(Ease.Linear));
 
             sequence.Append(m_windowToClose.transform.DOMove(Vector3.zero, 0.5f));
             sequence.Join(m_windowToClose.transform.DOScale(0, 0.5f));
+
+            diseaseManager.currentSerialNumber = currentSerialNumber;
         }
     }
 

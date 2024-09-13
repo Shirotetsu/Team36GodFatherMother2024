@@ -1863,7 +1863,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8291197221235324236}
         m_TargetAssemblyTypeName: Verdict, Assembly-CSharp
-        m_MethodName: ShowWindow
+        m_MethodName: Administer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2312,7 +2312,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3898866340195080993, guid: dad7aa6bd598f0b438ac451f77b07db6, type: 3}
       propertyPath: potionType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5988146970068390062, guid: dad7aa6bd598f0b438ac451f77b07db6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -2466,6 +2466,10 @@ PrefabInstance:
     - target: {fileID: 3865614367457945335, guid: dad7aa6bd598f0b438ac451f77b07db6, type: 3}
       propertyPath: m_Name
       value: Category Green
+      objectReference: {fileID: 0}
+    - target: {fileID: 3898866340195080993, guid: dad7aa6bd598f0b438ac451f77b07db6, type: 3}
+      propertyPath: potionType
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2670,7 +2674,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3898866340195080993, guid: dad7aa6bd598f0b438ac451f77b07db6, type: 3}
       propertyPath: potionType
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5988146970068390062, guid: dad7aa6bd598f0b438ac451f77b07db6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

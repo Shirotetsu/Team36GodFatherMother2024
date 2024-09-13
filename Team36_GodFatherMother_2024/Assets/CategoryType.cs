@@ -8,6 +8,7 @@ public class CategoryType : MonoBehaviour
 
     [SerializeField]
     private PotionType potionType;
+    public PotionType PotionType => potionType;
 
     public void ChangeColorToSelected()
     {
