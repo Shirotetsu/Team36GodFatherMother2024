@@ -39,6 +39,13 @@ public class Verdict : Window
     [SerializeField]
     private GameObject m_loading;
 
+    [SerializeField]
+    private AudioSource m_WinAudio;
+    [SerializeField]
+    private AudioSource m_LoseAudio;
+    [SerializeField]
+    private AudioSource m_Suspens;
+
     void Start()
     {
         if(!gameObject.activeSelf)
@@ -184,12 +191,26 @@ public class Verdict : Window
     public void PlayLoadingAnimation(bool _win)
     {
         m_loading.SetActive(true);
+
+        m_Suspens.Play();
+
+        HideWindow(this);
         m_loading.transform.DOLocalRotate(new Vector3(0, 360, 0), 1f, RotateMode.FastBeyond360)
-                .SetRelative(true).SetLoops(5).SetEase(Ease.Linear).OnComplete(() =>
+                .SetRelative(true).SetLoops(6).SetEase(Ease.Linear).OnComplete(() =>
                 {
                     m_Win.SetActive(_win);
                     m_Lose.SetActive(!_win);
                     m_loading.SetActive(false);
+                    m_Suspens.Stop();
+
+                    if (_win)
+                    {
+                        m_WinAudio.Play();
+                    }
+                    else 
+                    { 
+                        m_LoseAudio.Play();
+                    }
                 });
     }
 }
