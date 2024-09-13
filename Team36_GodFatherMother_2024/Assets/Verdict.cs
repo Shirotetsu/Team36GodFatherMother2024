@@ -2,6 +2,7 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class Verdict : Window
 {
@@ -30,6 +31,11 @@ public class Verdict : Window
     [SerializeField]
     private GameObject m_textBlue;
 
+    [SerializeField]
+    private GameObject m_Win;
+    [SerializeField]
+    private GameObject m_Lose;
+
     void Start()
     {
         if(!gameObject.activeSelf)
@@ -38,6 +44,9 @@ public class Verdict : Window
         }
 
         categoryOpen = true;
+
+        m_Win.SetActive(false);
+        m_Lose.SetActive(false);
     }
 
     public void Test(CategoryType categoryType)
@@ -134,7 +143,18 @@ public class Verdict : Window
 
     public void Administer()
     {
-        diseaseManager.VerifySerialNumber(categorySelected.PotionType);
+        if (diseaseManager.VerifySerialNumber(categorySelected.PotionType))
+        {
+            // Win
+            m_Win.SetActive(true);
+            m_Lose.SetActive(false);
+        }
+        else
+        {
+            // Lose
+            m_Win.SetActive(false);
+            m_Lose.SetActive(true);
+        }
     }
 
     private void UpdateHolders()
@@ -149,5 +169,10 @@ public class Verdict : Window
             categoryHolder.SetActive(false);
             recipeHolder.SetActive(true);
         }
+    }
+
+    public void ReloadScene()
+    {
+        SceneManager.LoadScene(0);
     }
 }
