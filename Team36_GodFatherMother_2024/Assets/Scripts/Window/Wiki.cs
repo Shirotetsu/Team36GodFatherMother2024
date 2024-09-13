@@ -15,8 +15,8 @@ public class Wiki : Window
 
     private void Start()
     {
-        DisplayPossibleDiseases();
         _possibleDiseases = new List<Disease>(_diseases);
+        DisplayPossibleDiseases();
         LinkTogglesWithSymptoms(); 
     }
 
@@ -96,10 +96,10 @@ public class Wiki : Window
     
     private void DisplayPossibleDiseases()
     {
-        _textMeshPro.text = "Possible Diseases:\n";
+        _textMeshPro.text = "\n";
         foreach (var disease in _possibleDiseases)
         {
-            _textMeshPro.text += disease.name + "\n";
+            _textMeshPro.text += "." + disease.name + "\n";
         }
     }
 }
