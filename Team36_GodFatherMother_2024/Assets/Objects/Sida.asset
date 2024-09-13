@@ -14,5 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Sida
   diseaseType: 0
-  allowToPass: 0
+  potionType: 2
+  allowToPass: 1
   serialNumber: 455125
+  symptoms: 
+  Description: 

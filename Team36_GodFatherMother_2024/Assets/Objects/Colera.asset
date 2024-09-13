@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Colera
   diseaseType: 2
+  potionType: 0
   allowToPass: 1
   serialNumber: 251862
-  symptoms: 00000000
+  symptoms: 00000000000000000000000000000000
   Description: 
