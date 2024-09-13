@@ -37,7 +37,10 @@ public class Verdict : Window
 
     void Start()
     {
-        this.gameObject.SetActive(false);
+        if(!gameObject.activeSelf)
+        {
+            this.gameObject.SetActive(false);
+        }
 
         categoryOpen = true;
 

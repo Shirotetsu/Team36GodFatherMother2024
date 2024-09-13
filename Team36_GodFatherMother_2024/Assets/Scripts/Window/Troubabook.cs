@@ -12,7 +12,7 @@ public class Troubabook : Window
         HostingPage,
         Yvain,
         Gauvain,
-        GodeFroy,
+        Mainard,
     }
     private TMP_Dropdown _dropdown;
     [SerializeField] private Personnage _personnage;
@@ -41,6 +41,12 @@ public class Troubabook : Window
                 break;
             case Personnage.Yvain:
                 sprite = _sprites[1];
+                break;
+            case Personnage.Mainard:
+                sprite = _sprites[2];
+                break;
+            case Personnage.HostingPage:
+                sprite = _sprites[3];
                 break;
             default:
                 Debug.Log("test");
