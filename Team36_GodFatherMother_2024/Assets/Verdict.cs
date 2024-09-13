@@ -30,11 +30,19 @@ public class Verdict : Window
     [SerializeField]
     private GameObject m_textBlue;
 
+    [SerializeField]
+    private GameObject m_Win;
+    [SerializeField]
+    private GameObject m_Lose;
+
     void Start()
     {
         this.gameObject.SetActive(false);
 
         categoryOpen = true;
+
+        m_Win.SetActive(false);
+        m_Lose.SetActive(false);
     }
 
     public void Test(CategoryType categoryType)
@@ -131,7 +139,18 @@ public class Verdict : Window
 
     public void Administer()
     {
-        diseaseManager.VerifySerialNumber(categorySelected.PotionType);
+        if (diseaseManager.VerifySerialNumber(categorySelected.PotionType))
+        {
+            // Win
+            m_Win.SetActive(true);
+            m_Lose.SetActive(false);
+        }
+        else
+        {
+            // Lose
+            m_Win.SetActive(false);
+            m_Lose.SetActive(true);
+        }
     }
 
     private void UpdateHolders()

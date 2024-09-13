@@ -47,17 +47,17 @@ public class DiseaseManager : MonoBehaviour
         }
     }
 
-    public void VerifySerialNumber(PotionType potionType)
+    public bool VerifySerialNumber(PotionType potionType)
     {
         DiseaseSO diseaseLinkToThisSN = diseases.Where(x => x.serialNumber == currentSerialNumber).FirstOrDefault();
 
         if (diseaseLinkToThisSN.potionType == potionType)
         {
-            Debug.Log("Healed !!");
+            return true;
         }
-        else 
+        else
         {
-            Debug.Log("Died !!");
+            return false;
         }
     }
 
