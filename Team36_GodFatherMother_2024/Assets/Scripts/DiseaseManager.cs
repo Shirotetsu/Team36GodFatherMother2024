@@ -8,9 +8,18 @@ public class DiseaseManager : MonoBehaviour
 {
     public enum DiseaseType
     {
-        Sida,
-        Rhume,
-        Colera
+        Luminouillade,
+        VortexusDoodle,
+        TemporaeWhoopsie,
+        SylvarisMiaulement,
+        ArcanumTricky,
+        TemporaeChabada,
+        FlammePopSizzle,
+        Lumipopcornus,
+        NexumBouchon,
+        OblivionisOups,
+        AetherisChapeau,
+        VeridionZouzou,
     }
 
     public enum Symptoms
@@ -61,7 +70,7 @@ public class DiseaseManager : MonoBehaviour
             if (_serialNumber == disease.serialNumber)
             {
                 foundSerialNumber = true;
-                m_currentDiseaseType = disease.diseaseType;
+                //m_currentDiseaseType = disease.diseaseType;
             }
         }
 

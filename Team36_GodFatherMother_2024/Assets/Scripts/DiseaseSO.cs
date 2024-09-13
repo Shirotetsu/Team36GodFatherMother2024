@@ -6,7 +6,7 @@ using static DiseaseManager;
 public class DiseaseSO : ScriptableObject
 {
     public string name;
-    public DiseaseType diseaseType;
+    //public DiseaseType diseaseType;
     public PotionType potionType;
     public bool allowToPass;
     public int serialNumber;
@@ -19,7 +19,7 @@ public class DiseaseSO : ScriptableObject
 
 public enum PotionType
 {
-    Red, 
     Green, 
+    Red, 
     Blue
 }
