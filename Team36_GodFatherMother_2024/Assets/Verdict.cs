@@ -2,6 +2,7 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class Verdict : Window
 {
@@ -168,5 +169,10 @@ public class Verdict : Window
             categoryHolder.SetActive(false);
             recipeHolder.SetActive(true);
         }
+    }
+
+    public void ReloadScene()
+    {
+        SceneManager.LoadScene(0);
     }
 }
