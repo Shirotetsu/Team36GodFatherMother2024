@@ -36,6 +36,9 @@ public class Verdict : Window
     [SerializeField]
     private GameObject m_Lose;
 
+    [SerializeField]
+    private GameObject m_loading;
+
     void Start()
     {
         if(!gameObject.activeSelf)
@@ -143,17 +146,19 @@ public class Verdict : Window
 
     public void Administer()
     {
+        m_Win.SetActive(false);
+        m_Lose.SetActive(false);
+
         if (diseaseManager.VerifySerialNumber(categorySelected.PotionType))
         {
             // Win
-            m_Win.SetActive(true);
-            m_Lose.SetActive(false);
+            //m_Win.SetActive(true);
+            PlayLoadingAnimation(true);
         }
         else
         {
             // Lose
-            m_Win.SetActive(false);
-            m_Lose.SetActive(true);
+            PlayLoadingAnimation(false);
         }
     }
 
@@ -174,5 +179,17 @@ public class Verdict : Window
     public void ReloadScene()
     {
         SceneManager.LoadScene(1);
+    }
+
+    public void PlayLoadingAnimation(bool _win)
+    {
+        m_loading.SetActive(true);
+        m_loading.transform.DOLocalRotate(new Vector3(0, 360, 0), 1f, RotateMode.FastBeyond360)
+                .SetRelative(true).SetLoops(5).SetEase(Ease.Linear).OnComplete(() =>
+                {
+                    m_Win.SetActive(_win);
+                    m_Lose.SetActive(!_win);
+                    m_loading.SetActive(false);
+                });
     }
 }
